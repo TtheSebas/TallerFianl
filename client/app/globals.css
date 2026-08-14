@@ -1935,7 +1935,7 @@ nav.nav--scrolled .hamburger span {
 }
 
 .gallery-panel.gallery-panel--open {
-    max-height: 1000px;
+    max-height: 3000px;
     opacity: 1;
     margin-top: 2rem;
 }
@@ -1945,7 +1945,24 @@ nav.nav--scrolled .hamburger span {
     border-radius: 8px;
     border: 1px solid rgba(192,146,80,0.22);
     padding: 2rem 2.5rem;
-    overflow: hidden;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+/* Scrollbar for the gallery panel */
+.gallery-panel-inner::-webkit-scrollbar {
+    width: 6px;
+}
+.gallery-panel-inner::-webkit-scrollbar-track {
+    background: rgba(253, 250, 246, 0.05);
+    border-radius: 4px;
+}
+.gallery-panel-inner::-webkit-scrollbar-thumb {
+    background: rgba(192, 146, 80, 0.5);
+    border-radius: 4px;
+}
+.gallery-panel-inner::-webkit-scrollbar-thumb:hover {
+    background: rgba(192, 146, 80, 0.8);
 }
 
 .gallery-panel-header {
