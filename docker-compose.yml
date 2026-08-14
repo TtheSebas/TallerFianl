@@ -1,0 +1,74 @@
+version: "3.9"
+
+services:
+  # ───────────────────────────────────────────────
+  # PostgreSQL 16 – Base de datos principal
+  # ───────────────────────────────────────────────
+  db:
+    image: postgres:16-alpine
+    container_name: taller2_db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: taller2
+      POSTGRES_USER: ${POSTGRES_USER:-taller_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-taller_secret}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-taller_admin} -d taller2"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - taller_network
+
+  # ───────────────────────────────────────────────
+  # Express API Server
+  # ───────────────────────────────────────────────
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: taller2_server
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-taller_admin}:${POSTGRES_PASSWORD:-taller_secret}@db:5432/taller2
+      NODE_ENV: ${NODE_ENV:-production}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - taller_network
+
+  # ───────────────────────────────────────────────
+  # Next.js Client
+  # ───────────────────────────────────────────────
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: taller2_client
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000/api}
+    depends_on:
+      - server
+    networks:
+      - taller_network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  taller_network:
+    driver: bridge
