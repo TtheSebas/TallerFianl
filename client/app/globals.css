@@ -1241,14 +1241,15 @@ footer {
 }
 
 .ba-container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     position: relative;
     border-radius: var(--radius-md);
     overflow: hidden;
-    aspect-ratio: 16/10;
+    aspect-ratio: 3/4;
     cursor: col-resize;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(192, 146, 80, 0.25);
 }
 
 .ba-container img {
@@ -1820,7 +1821,7 @@ footer {
     }
 
     .process-timeline { grid-template-columns: 1fr; gap: 1.5rem; }
-    .ba-container { aspect-ratio: 4/3; }
+    .ba-container { aspect-ratio: 3/4; }
     .testimonial-card-v2 { grid-template-columns: 1fr; }
     .testimonial-photo { height: 200px; min-height: auto; }
     .catalog-modal { padding: 1.75rem; }
