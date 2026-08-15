@@ -28,11 +28,8 @@ export default function Navbar() {
   return (
     <>
       <nav className={isScrolled ? 'nav--scrolled' : ''}>
-        <a href="#" className="logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <a href="#" className="logo" style={{ textDecoration: 'none' }}>
           Línea de Muebles <span>Mesías</span>
-          <span style={{ fontSize: '0.75rem', background: 'var(--wood-medium)', color: '#fff', padding: '0.2rem 0.5rem', borderRadius: '4px', letterSpacing: 'normal', textTransform: 'none', fontFamily: 'sans-serif' }}>
-            Taller 2.0
-          </span>
         </a>
         <div className="nav-links">
           <Link href="#colecciones">Colecciones</Link>

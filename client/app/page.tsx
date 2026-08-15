@@ -7,7 +7,6 @@ import Navbar from '@/components/Navbar';
 import GalleryModal from '@/components/GalleryModal';
 import CotizadorAlgoritmico from '@/components/CotizadorAlgoritmico';
 import BeforeAfter from '@/components/BeforeAfter';
-import CatalogSection from '@/components/CatalogSection';
 import FAQ from '@/components/FAQ';
 import Testimonials from '@/components/Testimonials';
 import WhatsAppContactForm from '@/components/WhatsAppContactForm';
@@ -637,9 +636,6 @@ export default function HomePage() {
 
         {/* ANTES Y DESPUES */}
         <BeforeAfter />
-
-        {/* CATALOGO */}
-        <CatalogSection />
 
         {/* TESTIMONIOS */}
         <Testimonials />
