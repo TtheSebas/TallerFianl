@@ -22,6 +22,8 @@ export default function BeforeAfter() {
           className="ba-img-before"
           width={768}
           height={1024}
+          quality={100}
+          unoptimized={true}
           priority
         />
         <Image
@@ -33,6 +35,8 @@ export default function BeforeAfter() {
           style={{ clipPath: `inset(0 0 0 ${sliderValue}%)` }}
           width={768}
           height={1024}
+          quality={100}
+          unoptimized={true}
           priority
         />
         <div className="ba-slider" style={{ left: `${sliderValue}%` }} />
