@@ -23,7 +23,7 @@ export default function WhatsAppContactForm() {
       `Me interesa: ${interes}\n` +
       (mensaje ? `Mensaje: ${mensaje}\n` : '') +
       `Mi WhatsApp: ${telefono}`;
-    window.open(`https://wa.me/593990629502?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/593995795486?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (

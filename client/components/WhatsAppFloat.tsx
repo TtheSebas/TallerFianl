@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 export default function WhatsAppFloat() {
-  const [whatsappUrl, setWhatsappUrl] = useState('https://wa.me/593990629502?text=Hola,%20me%20interesa%20cotizar%20un%20mueble%20a%20medida%20con%20Muebles%20Mes%C3%ADas.');
+  const [whatsappUrl, setWhatsappUrl] = useState('https://wa.me/593995795486?text=Hola,%20me%20interesa%20cotizar%20un%20mueble%20a%20medida%20con%20Muebles%20Mes%C3%ADas.');
 
   useEffect(() => {
     const sections = [
@@ -30,7 +30,7 @@ export default function WhatsAppFloat() {
             const match = sections.find((s) => s.id === sectionId);
             if (match) {
               const encodedText = encodeURIComponent(match.text);
-              setWhatsappUrl(`https://wa.me/593990629502?text=${encodedText}`);
+              setWhatsappUrl(`https://wa.me/593995795486?text=${encodedText}`);
             }
           }
         });
@@ -47,7 +47,7 @@ export default function WhatsAppFloat() {
         const heroObserver = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setWhatsappUrl('https://wa.me/593990629502?text=Hola,%20me%20interesa%20cotizar%20un%20mueble%20a%20medida%20con%20Muebles%20Mes%C3%ADas.');
+              setWhatsappUrl('https://wa.me/593995795486?text=Hola,%20me%20interesa%20cotizar%20un%20mueble%20a%20medida%20con%20Muebles%20Mes%C3%ADas.');
             }
           });
         }, observerOptions);

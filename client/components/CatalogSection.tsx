@@ -18,7 +18,7 @@ export default function CatalogSection() {
     const message = encodeURIComponent(
       `Hola, soy ${nombre}. Mi número es ${whatsapp}. Me gustaría recibir el Catálogo 2026.`
     );
-    window.open(`https://wa.me/593990629502?text=${message}`, '_blank');
+    window.open(`https://wa.me/593995795486?text=${message}`, '_blank');
     setShowModal(false);
   };
 
