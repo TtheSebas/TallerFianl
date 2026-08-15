@@ -36,6 +36,7 @@ export default function Navbar() {
         </a>
         <div className="nav-links">
           <Link href="#colecciones">Colecciones</Link>
+          <Link href="/catalogo" style={{ color: 'var(--gold)', fontWeight: 600 }}>Catálogo Editorial</Link>
           <Link href="#proceso">Proceso</Link>
           <Link href="#nosotros">Nosotros</Link>
           <Link href="#faq">FAQ</Link>
@@ -58,6 +59,7 @@ export default function Navbar() {
       </nav>
 
       <div className={`mobile-menu ${isMenuOpen ? 'open mobile-menu--open' : ''}`} id="mobileMenu">
+        <Link href="/catalogo" onClick={toggleMenu} style={{ color: 'var(--gold)', fontWeight: 600 }}>✦ Catálogo Editorial (12 Págs)</Link>
         <Link href="#colecciones" onClick={toggleMenu}>Colecciones</Link>
         <Link href="#proceso" onClick={toggleMenu}>Proceso</Link>
         <Link href="#nosotros" onClick={toggleMenu}>Nosotros</Link>

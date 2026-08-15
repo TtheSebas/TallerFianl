@@ -63,6 +63,13 @@ export default function HomePage() {
                   </svg>
                   Solicitar asesoría gratuita
                 </button>
+                <a href="/catalogo" className="hero-btn" style={{ background: 'var(--espresso)', border: '1px solid var(--gold)', color: 'var(--gold)', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="2" y="3" width="20" height="18" rx="2"/>
+                    <path d="M12 3v18"/>
+                  </svg>
+                  Catálogo Editorial (12 Págs)
+                </a>
                 <a href="#colecciones" className="hero-btn-outline">Ver colecciones</a>
               </div>
               <p style={{ fontSize: '12px', color: 'rgba(44, 26, 14, 0.55)', margin: '0.25rem 0 0 0', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
