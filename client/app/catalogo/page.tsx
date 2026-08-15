@@ -9,22 +9,53 @@ interface CustomImageSlot {
   [key: string]: string; // slotId -> image url / dataUrl
 }
 
+// Curated default high-end photography for all 12 editorial spreads
+const DEFAULT_CATALOG_IMAGES: Record<string, string> = {
+  page1_cover: '/img/salaysofas/20.webp',
+  page3_texture: '/img/proceso/157.webp',
+  page4_wood_grain: '/img/proceso/158.webp',
+  page4_joinery: '/img/proceso/225.webp',
+  page5_sofa_main: '/img/salaysofas/111.webp',
+  page5_sofa_detail1: '/img/salaysofas/113.webp',
+  page5_sofa_detail2: '/img/salaysofas/169.webp',
+  page6_sofa_wide: '/img/salaysofas/32.webp',
+  page6_sofa_cushion: '/img/salaysofas/33.webp',
+  page6_sofa_frame_wood: '/img/salaysofas/87.webp',
+  page7_dining_hero: '/img/comedor/11.webp',
+  page7_dining_chair: '/img/comedor/18.webp',
+  page7_dining_corner: '/img/comedor/44.webp',
+  page8_buffet: '/img/comedor/115.webp',
+  page8_dining_lifestyle: '/img/comedor/117.webp',
+  page9_bed1: '/img/dormitorio/1.webp',
+  page9_nightstand: '/img/dormitorio/15.webp',
+  page9_dresser: '/img/espejos/whatsapp-image-2026-06-07-at-9-34-45-pm8.webp',
+  page9_bed_detail: '/img/dormitorio/61.webp',
+  page10_closet_main: '/img/closet/49.webp',
+  page10_closet_drawers: '/img/closet/166.webp',
+  page10_closet_doors: '/img/closet/181.webp',
+  page11_kitchen: '/img/cocinas/183.webp',
+  page11_bathroom: '/img/bano/64.webp',
+  page11_office: '/img/oficina/100.webp',
+};
+
 export default function CatalogoPresentation() {
   const [currentPage, setCurrentPage] = useState(1);
   const [viewMode, setViewMode] = useState<'slider' | 'all' | 'grid'>('slider');
-  const [images, setImages] = useState<CustomImageSlot>({});
+  const [images, setImages] = useState<CustomImageSlot>(DEFAULT_CATALOG_IMAGES);
   const [activeModalSlot, setActiveModalSlot] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('sala');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const TOTAL_PAGES = 12;
 
-  // Load custom images from localStorage on mount
+  // Load custom images from localStorage on mount (merges with defaults)
   useEffect(() => {
     try {
       const saved = localStorage.getItem('muebles_mesias_catalog_images');
       if (saved) {
-        setImages(JSON.parse(saved));
+        setImages({ ...DEFAULT_CATALOG_IMAGES, ...JSON.parse(saved) });
+      } else {
+        setImages(DEFAULT_CATALOG_IMAGES);
       }
     } catch (e) {
       console.error('Error loading saved catalog images', e);
@@ -58,8 +89,8 @@ export default function CatalogoPresentation() {
   };
 
   const resetAllImages = () => {
-    if (window.confirm('¿Deseas restablecer todos los marcos de imagen a su estado original vacío?')) {
-      setImages({});
+    if (window.confirm('¿Deseas restablecer todas las fotografías a la selección curada por defecto?')) {
+      setImages(DEFAULT_CATALOG_IMAGES);
       localStorage.removeItem('muebles_mesias_catalog_images');
     }
   };
