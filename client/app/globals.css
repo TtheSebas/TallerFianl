@@ -68,10 +68,10 @@ nav {
     position: sticky;
     top: 0;
     z-index: 200;
-    background: rgba(253, 250, 246, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--sand);
+    background: rgba(18, 18, 18, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(192, 146, 80, 0.25);
     padding: 1rem 2.5rem;
     display: flex;
     justify-content: space-between;
@@ -85,7 +85,7 @@ nav {
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 0.04em;
-    color: var(--espresso);
+    color: #FDFAF6;
     white-space: nowrap;
     transition: color 0.4s ease;
 }
@@ -104,9 +104,9 @@ nav {
 .nav-links a {
     text-decoration: none;
     font-size: 14px;
-    color: var(--walnut);
+    color: rgba(253, 250, 246, 0.82);
     letter-spacing: 0.03em;
-    transition: color 0.4s ease;
+    transition: color 0.3s ease;
     position: relative;
 }
 
@@ -122,7 +122,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--espresso);
+    color: var(--gold);
 }
 
 .nav-links a:hover::after {
@@ -130,24 +130,26 @@ nav {
 }
 
 .nav-cta {
-    background: var(--espresso);
-    color: var(--white);
+    background: var(--gold);
+    color: #121212;
     border: none;
     padding: 0.55rem 1.35rem;
     border-radius: var(--radius-sm);
     font-size: 12px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-weight: 500;
-    transition: background 0.4s ease, color 0.4s ease;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .nav-cta:hover {
-    background: var(--walnut);
+    background: #d4a660;
+    transform: translateY(-1px);
 }
 
-/* Hamburger (mÃ³vil) */
+/* Hamburger (móvil) */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -162,7 +164,7 @@ nav {
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--espresso);
+    background: #FDFAF6;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, background 0.4s ease;
 }
@@ -179,7 +181,7 @@ nav {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* MenÃº mÃ³vil desplegable */
+/* Menú móvil desplegable */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -187,10 +189,10 @@ nav {
     left: 0;
     right: 0;
     z-index: 190;
-    background: rgba(253, 250, 246, 0.96);
+    background: rgba(16, 16, 16, 0.98);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--sand);
+    border-bottom: 1px solid rgba(192, 146, 80, 0.25);
     flex-direction: column;
     padding: 1rem 2rem 1.5rem;
     gap: 0.5rem;
@@ -207,10 +209,10 @@ nav {
 
 .mobile-menu a {
     text-decoration: none;
-    color: var(--espresso);
+    color: #FDFAF6;
     font-size: 16px;
     padding: 0.6rem 0;
-    border-bottom: 1px solid var(--sand);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     transition: color var(--transition);
 }
 
@@ -1827,9 +1829,9 @@ footer {
 
 /* Nav scrolled state */
 nav.nav--scrolled {
-    background: rgba(45, 28, 16, 0.98);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
-    border-bottom-color: rgba(192, 146, 80, 0.15);
+    background: rgba(10, 10, 10, 0.98);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+    border-bottom-color: rgba(192, 146, 80, 0.25);
 }
 
 /* Logo y links cuando la nav es oscura */
@@ -1842,16 +1844,16 @@ nav.nav--scrolled .logo span {
 }
 
 nav.nav--scrolled .nav-links a {
-    color: rgba(253, 250, 246, 0.75);
+    color: rgba(253, 250, 246, 0.85);
 }
 
 nav.nav--scrolled .nav-links a:hover {
-    color: #FDFAF6;
+    color: #C09250;
 }
 
 nav.nav--scrolled .nav-cta {
     background: #C09250;
-    color: #2C1A0E;
+    color: #121212;
 }
 
 nav.nav--scrolled .nav-cta:hover {

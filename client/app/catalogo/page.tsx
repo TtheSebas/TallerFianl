@@ -1262,8 +1262,8 @@ export default function CatalogoPresentation() {
           top: 0;
           z-index: 1000;
           width: 100%;
-          background: rgba(30, 26, 23, 0.95);
-          backdrop-filter: blur(12px);
+          background: rgba(14, 14, 14, 0.98);
+          backdrop-filter: blur(14px);
           border-bottom: 1px solid rgba(192, 146, 80, 0.25);
           display: flex;
           align-items: center;
