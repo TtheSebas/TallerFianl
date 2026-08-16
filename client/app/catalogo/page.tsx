@@ -146,7 +146,7 @@ export default function CatalogoPresentation() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activeModalSlot]);
 
-  // Image Frame Placeholder Component
+  // Image Frame Component (Fixed images)
   const ImageFrame = ({
     id,
     label,
@@ -164,50 +164,16 @@ export default function CatalogoPresentation() {
 
     return (
       <div
-        className={`editorial-frame ${imgUrl ? 'has-image' : 'is-empty'} ${className}`}
+        className={`editorial-frame has-image ${className}`}
         style={{
           aspectRatio: aspect,
           ...style,
         }}
-        onDragOver={handleDragOver}
-        onDrop={(e) => handleDrop(id, e)}
-        onClick={() => setActiveModalSlot(id)}
       >
-        {imgUrl ? (
+        {imgUrl && (
           <div className="frame-image-wrapper">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={imgUrl} alt={label} className="frame-image" />
-            <div className="frame-actions">
-              <button
-                className="frame-btn frame-btn-change"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActiveModalSlot(id);
-                }}
-                title="Cambiar foto"
-              >
-                Cambiar
-              </button>
-              <button
-                className="frame-btn frame-btn-remove"
-                onClick={(e) => removeSlotImage(id, e)}
-                title="Quitar foto"
-              >
-                &times;
-              </button>
-            </div>
-          </div>
-        ) : (
-          <div className="frame-placeholder-content">
-            <div className="placeholder-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                <circle cx="8.5" cy="8.5" r="1.5" />
-                <polyline points="21 15 16 10 5 21" />
-              </svg>
-            </div>
-            <p className="placeholder-label">{label}</p>
-            <span className="placeholder-hint">Arrastra una imagen o clic para elegir</span>
           </div>
         )}
       </div>
