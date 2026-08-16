@@ -42,6 +42,8 @@ export const metadata: Metadata = {
   },
 };
 
+import WhatsAppFloat from '@/components/WhatsAppFloat';
+
 export default function RootLayout({
   children,
 }: {
@@ -51,6 +53,7 @@ export default function RootLayout({
     <html lang="es" className={`${playfair.variable} ${inter.variable}`} style={{ scrollBehavior: 'smooth' }}>
       <body>
         {children}
+        <WhatsAppFloat />
       </body>
     </html>
   );

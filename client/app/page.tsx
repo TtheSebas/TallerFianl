@@ -10,8 +10,6 @@ import BeforeAfter from '@/components/BeforeAfter';
 import FAQ from '@/components/FAQ';
 import Testimonials from '@/components/Testimonials';
 import WhatsAppContactForm from '@/components/WhatsAppContactForm';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
-
 export default function HomePage() {
   const [galleryKey, setGalleryKey] = useState<string | null>(null);
 
@@ -686,9 +684,6 @@ export default function HomePage() {
           </div>
         </footer>
       </main>
-
-      {/* Botón flotante WhatsApp */}
-      <WhatsAppFloat />
     </>
   );
 }
