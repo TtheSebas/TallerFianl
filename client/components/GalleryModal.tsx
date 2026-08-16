@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { GALLERIES } from '../lib/GalleryData';
 
@@ -135,7 +136,7 @@ export default function GalleryModal({ galleryKey, onClose }: GalleryModalProps)
         </div>
       </div>
 
-      {lightboxIndex !== null && (
+      {lightboxIndex !== null && typeof document !== 'undefined' && createPortal(
         <div className="lightbox lightbox--open" id="lightbox" aria-hidden="false" onClick={closeLightbox}>
           <div className="lightbox-backdrop"></div>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
@@ -165,7 +166,8 @@ export default function GalleryModal({ galleryKey, onClose }: GalleryModalProps)
               {lightboxIndex + 1} / {data.images.length}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
