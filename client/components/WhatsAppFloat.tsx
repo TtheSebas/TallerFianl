@@ -1,11 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function WhatsAppFloat() {
   const [whatsappUrl, setWhatsappUrl] = useState('https://wa.me/593995795486?text=Hola,%20me%20interesa%20cotizar%20un%20mueble%20a%20medida%20con%20Muebles%20Mes%C3%ADas.');
+  const pathname = usePathname();
 
   useEffect(() => {
+    // ... same as before
     const sections = [
       { id: 'colecciones', text: 'Hola, me interesa cotizar un diseño de sus colecciones.' },
       { id: 'nosotros', text: 'Hola, me interesa saber más sobre el taller de Muebles Mesías.' },
@@ -61,6 +64,10 @@ export default function WhatsAppFloat() {
       return () => observer.disconnect();
     }
   }, []);
+
+  if (pathname?.startsWith('/catalogo')) {
+    return null;
+  }
 
   return (
     <a
