@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import EditorialReveal from '@/components/EditorialReveal';
 import { GALLERIES } from '@/lib/GalleryData';
 
 // Types
@@ -302,7 +303,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="1"
         >
-          <div className="page-inner cover-layout">
+          <EditorialReveal delay={150} className="page-inner cover-layout">
             <div className="cover-header">
               <p className="cover-edition-tag">COLECCIÓN DE ALTA GAMA · EDICIÓN 2026</p>
               <div className="cover-rule"></div>
@@ -336,7 +337,7 @@ export default function CatalogoPresentation() {
               </div>
               <div className="page-number-stamp">PÁG. 01</div>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -348,7 +349,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="2"
         >
-          <div className="page-inner">
+          <EditorialReveal delay={150} className="page-inner">
             <div className="page-top-header">
               <span className="page-chapter">01 · SUMARIO & MANIFIESTO</span>
               <span className="page-header-brand">MUEBLES MESÍAS</span>
@@ -439,7 +440,7 @@ export default function CatalogoPresentation() {
               <span className="footer-left">LINEA DE MUEBLES MESÍAS</span>
               <span className="footer-page-num">02</span>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -451,7 +452,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="3"
         >
-          <div className="page-inner">
+          <EditorialReveal delay={150} className="page-inner">
             <div className="page-top-header">
               <span className="page-chapter">02 · FILOSOFÍA & HERENCIA</span>
               <span className="page-header-brand">MUEBLES MESÍAS</span>
@@ -513,7 +514,7 @@ export default function CatalogoPresentation() {
               <span className="footer-left">CALIDAD Y COMPROMISO ARTESANAL</span>
               <span className="footer-page-num">03</span>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -525,7 +526,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="4"
         >
-          <div className="page-inner">
+          <EditorialReveal delay={150} className="page-inner">
             <div className="page-top-header">
               <span className="page-chapter">03 · PROCESO & MATERIA PRIMA</span>
               <span className="page-header-brand">MUEBLES MESÍAS</span>
@@ -584,7 +585,7 @@ export default function CatalogoPresentation() {
               <span className="footer-left">PROCESO ARTESANAL Y SOSTENIBILIDAD</span>
               <span className="footer-page-num">04</span>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -596,7 +597,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="5"
         >
-          <div className="page-inner">
+          <EditorialReveal delay={150} className="page-inner">
             <div className="page-top-header">
               <span className="page-chapter">04 · COLECCIÓN LIVING</span>
               <span className="page-header-brand">MUEBLES MESÍAS</span>
@@ -644,7 +645,7 @@ export default function CatalogoPresentation() {
               <span className="footer-left">SALAS DE ESTAR Y CONFORT RESIDENCIAL</span>
               <span className="footer-page-num">05</span>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -656,7 +657,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="6"
         >
-          <div className="page-inner">
+          <EditorialReveal delay={150} className="page-inner">
             <div className="page-top-header">
               <span className="page-chapter">04 · COLECCIÓN LIVING (DETALLES)</span>
               <span className="page-header-brand">MUEBLES MESÍAS</span>
@@ -698,7 +699,7 @@ export default function CatalogoPresentation() {
               <span className="footer-left">ERGONOMÍA Y CONFORT PERSONALIZADO</span>
               <span className="footer-page-num">06</span>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -710,7 +711,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="7"
         >
-          <div className="page-inner">
+          <EditorialReveal delay={150} className="page-inner">
             <div className="page-top-header">
               <span className="page-chapter">05 · COLECCIÓN COMEDORES</span>
               <span className="page-header-brand">MUEBLES MESÍAS</span>
@@ -767,7 +768,7 @@ export default function CatalogoPresentation() {
               <span className="footer-left">MESAS DE COMEDOR Y SILLAS DE AUTOR</span>
               <span className="footer-page-num">07</span>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -779,7 +780,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="8"
         >
-          <div className="page-inner">
+          <EditorialReveal delay={150} className="page-inner">
             <div className="page-top-header">
               <span className="page-chapter">05 · MOBILIARIO DE COMEDOR (COMPLEMENTOS)</span>
               <span className="page-header-brand">MUEBLES MESÍAS</span>
@@ -823,7 +824,7 @@ export default function CatalogoPresentation() {
               <span className="footer-left">COMPLEMENTOS DE COMEDOR Y ALMACENAJE</span>
               <span className="footer-page-num">08</span>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -835,7 +836,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="9"
         >
-          <div className="page-inner">
+          <EditorialReveal delay={150} className="page-inner">
             <div className="page-top-header">
               <span className="page-chapter">06 · SANTUARIOS DE DESCANSO</span>
               <span className="page-header-brand">MUEBLES MESÍAS</span>
@@ -895,7 +896,7 @@ export default function CatalogoPresentation() {
               <span className="footer-left">DORMITORIOS Y MOBILIARIO DE DESCANSO</span>
               <span className="footer-page-num">09</span>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -907,7 +908,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="10"
         >
-          <div className="page-inner">
+          <EditorialReveal delay={150} className="page-inner">
             <div className="page-top-header">
               <span className="page-chapter">07 · ALMACENAMIENTO ARQUITECTÓNICO</span>
               <span className="page-header-brand">MUEBLES MESÍAS</span>
@@ -961,7 +962,7 @@ export default function CatalogoPresentation() {
               <span className="footer-left">SISTEMAS DE CLOSET Y WALK-IN CLOSETS</span>
               <span className="footer-page-num">10</span>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -973,7 +974,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="11"
         >
-          <div className="page-inner">
+          <EditorialReveal delay={150} className="page-inner">
             <div className="page-top-header">
               <span className="page-chapter">08 · PROYECTOS ARQUITECTÓNICOS</span>
               <span className="page-header-brand">MUEBLES MESÍAS</span>
@@ -1027,7 +1028,7 @@ export default function CatalogoPresentation() {
               <span className="footer-left">CARPINTERÍA INTEGRAL PARA EL HOGAR</span>
               <span className="footer-page-num">11</span>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
 
         {/* ========================================================================= */}
@@ -1039,7 +1040,7 @@ export default function CatalogoPresentation() {
           }`}
           data-page="12"
         >
-          <div className="page-inner back-cover-layout">
+          <EditorialReveal delay={150} className="page-inner back-cover-layout">
             <div className="back-cover-top">
               <div className="back-cover-badge">LÍNEA DE MUEBLES MESÍAS</div>
               <div className="back-cover-line"></div>
@@ -1113,7 +1114,7 @@ export default function CatalogoPresentation() {
               </div>
               <div className="page-number-stamp">PÁG. 12</div>
             </div>
-          </div>
+          </EditorialReveal>
         </section>
       </main>
 
