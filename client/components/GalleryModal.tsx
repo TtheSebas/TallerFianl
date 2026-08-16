@@ -14,10 +14,17 @@ export default function GalleryModal({ galleryKey, onClose }: GalleryModalProps)
 
   useEffect(() => {
     if (galleryKey) {
+      // First, trigger the CSS visibility and expansion
+      setIsVisible(true);
+      
+      // Then, wait a bit for the DOM to update max-height before scrolling
       const timer = setTimeout(() => {
-        setIsVisible(true);
-        document.getElementById('galleryPanel')?.scrollIntoView({ behavior: 'smooth' });
-      }, 50);
+        const panel = document.getElementById('galleryPanel');
+        if (panel) {
+          const y = panel.getBoundingClientRect().top + window.scrollY - 100;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 150);
       return () => clearTimeout(timer);
     } else {
       setIsVisible(false);
