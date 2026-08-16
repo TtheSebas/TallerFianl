@@ -224,29 +224,10 @@ export default function CatalogoPresentation() {
               </svg>
               Páginas ({TOTAL_PAGES})
             </button>
-            <button
-              className={`mode-btn ${viewMode === 'grid' ? 'active' : ''}`}
-              onClick={() => setViewMode('grid')}
-              title="Vista cuadrícula general"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="3" y="3" width="7" height="7" />
-                <rect x="14" y="3" width="7" height="7" />
-                <rect x="14" y="14" width="7" height="7" />
-                <rect x="3" y="14" width="7" height="7" />
-              </svg>
-              Cuadrícula
-            </button>
           </div>
         </div>
 
         <div className="toolbar-right">
-          <button className="tool-btn btn-reset" onClick={resetAllImages} title="Vaciar marcos de fotos">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-            </svg>
-            Limpiar Fotos
-          </button>
           <button className="tool-btn btn-print" onClick={() => window.print()} title="Imprimir o Guardar en PDF">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <polyline points="6 9 6 2 18 2 18 9" />
@@ -2482,6 +2463,14 @@ export default function CatalogoPresentation() {
 
         /* PRINT STYLES (Exact 12-page PDF magazine output) */
         @media print {
+          /* Force all animated elements to be visible */
+          * {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+            animation: none !important;
+          }
+
           body,
           html,
           .catalog-presentation-container {
@@ -2515,6 +2504,10 @@ export default function CatalogoPresentation() {
             box-shadow: none !important;
             border: none !important;
             padding: 3.5rem 4rem !important;
+          }
+
+          .editorial-page.hidden-page {
+            display: block !important;
           }
 
           .cover-page,
