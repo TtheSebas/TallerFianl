@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Fabrica de Muebles a Medida en Ambato | Cocinas, Closets y Dormitorios | Muebles Mesias Ecuador',
+  title: 'Línea de Muebles Mesías',
   description:
     'Fabrica de muebles a medida en Ambato, Ecuador. Cocinas integrales, closets, dormitorios, comedores y mas. Carpinteria arquitectonica con garantia de 1 año. Cotiza por WhatsApp.',
   keywords: [
