@@ -43,6 +43,7 @@ export const metadata: Metadata = {
 };
 
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import Script from 'next/script';
 
 export default function RootLayout({
   children,
@@ -51,6 +52,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${playfair.variable} ${inter.variable}`} style={{ scrollBehavior: 'smooth' }}>
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-TJZE4354DT`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-TJZE4354DT', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </head>
       <body>
         {children}
         <WhatsAppFloat />
