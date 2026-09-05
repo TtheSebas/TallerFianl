@@ -220,7 +220,7 @@ export default function CotizadorAlgoritmico() {
                 const msg = encodeURIComponent(
                   `Hola Muebles Mesías, calculé un presupuesto en su sitio web:\n- Espacio: ${espacio}\n- Dimensiones: ${ancho || '-'}x${alto || '-'}x${profundidad || '-'} cm\n- Material: ${material}\n- Ciudad: ${ciudad}\n- Estimación: $${precioEstimado.min} - $${precioEstimado.max} USD\n¿Podrían brindarme asesoría personalizada?`
                 );
-                window.open(`https://wa.me/593995795486?text=${msg}`, '_blank');
+                window.open(`https://wa.me/593959048059?text=${msg}`, '_blank');
               }}
               style={{
                 padding: '1rem',
