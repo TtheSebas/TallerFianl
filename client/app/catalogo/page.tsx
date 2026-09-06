@@ -1143,7 +1143,7 @@ export default function CatalogoPresentation() {
             {/* Category tabs */}
             <div className="gallery-tabs">
               {Object.entries(GALLERIES)
-                .filter(([key]) => key !== 'videosexibicion' && key !== 'proceso')
+                .filter(([key]) => key !== 'videos' && key !== 'proceso')
                 .map(([key, cat]) => (
                   <button
                     key={key}

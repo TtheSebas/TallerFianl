@@ -503,7 +503,7 @@ export default function HomePage() {
             </article>
 
             {/* VIDEOS */}
-            <article className="card" tabIndex={0} onClick={() => openGallery('videosexibicion')}>
+            <article className="card" tabIndex={0} onClick={() => openGallery('videos')}>
               <div className="card-img card-img--video">
                 <video src="/img/videosexibicion/42.mp4" muted playsInline preload="metadata" className="card-cover-video"></video>
                 <div className="card-tag">Video</div>
