@@ -309,9 +309,9 @@ export const GALLERIES: Record<string, { title: string; poster?: string; precioD
   videos: {
     title: "Videos de Exhibicion",
     images: [
-      { src: "img/VideosExibicion/42.mp4",  alt: "Video de exhibicion", type: "video" },
-      { src: "img/VideosExibicion/104.mp4", alt: "Video de exhibicion", type: "video" },
-      { src: "img/VideosExibicion/153.mp4", alt: "Video de exhibicion", type: "video" }
+      { src: "img/videosexibicion/42.mp4",  alt: "Video de exhibicion", type: "video" },
+      { src: "img/videosexibicion/104.mp4", alt: "Video de exhibicion", type: "video" },
+      { src: "img/videosexibicion/153.mp4", alt: "Video de exhibicion", type: "video" }
     ]
   }
 };
