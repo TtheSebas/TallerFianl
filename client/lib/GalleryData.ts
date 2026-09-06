@@ -299,6 +299,9 @@ export const GALLERIES: Record<string, { title: string; poster?: string; precioD
   proceso: {
     title: "Proceso de Fabricacion",
     images: [
+      { src: "img/proceso/proceso-nuevo-6.jpg", alt: "Carpintero trabajando en mueble de madera" },
+      { src: "img/proceso/proceso-nuevo-7.jpg", alt: "Estructura de cama de madera cruda" },
+      { src: "img/proceso/proceso-nuevo-8.jpg", alt: "Ensamblaje de cama en taller" },
       { src: "img/proceso/proceso-nuevo-1.jpg", alt: "Fabricación de sillas en taller" },
       { src: "img/proceso/proceso-nuevo-2.jpg", alt: "Base de mesa tallada" },
       { src: "img/proceso/proceso-nuevo-3.jpg", alt: "Estructuras de sillas de madera" },
