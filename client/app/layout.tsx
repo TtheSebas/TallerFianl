@@ -44,6 +44,7 @@ export const metadata: Metadata = {
 
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 
 export default function RootLayout({
   children,
@@ -76,6 +77,7 @@ export default function RootLayout({
       <body>
         {children}
         <WhatsAppFloat />
+        <Analytics />
       </body>
     </html>
   );
