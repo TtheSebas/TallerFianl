@@ -44,6 +44,11 @@ export const GALLERIES: Record<string, { title: string; poster?: string; precioD
   dormitorio: {
     title: "Dormitorio",
     images: [
+      { src: "img/dormitorio/cama-nueva-1.jpg", alt: "Cama a medida Muebles Mesias" },
+      { src: "img/dormitorio/cama-nueva-2.jpg", alt: "Dormitorio de lujo Muebles Mesias" },
+      { src: "img/dormitorio/cama-nueva-3.jpg", alt: "Cabecero tapizado" },
+      { src: "img/dormitorio/cama-nueva-4.jpg", alt: "Detalle cama a medida" },
+      { src: "img/dormitorio/cama-nueva-5.jpg", alt: "Mueble de dormitorio" },
       { src: "img/dormitorio/1.webp", alt: "Dormitorio" },
       { src: "img/dormitorio/6.webp", alt: "Dormitorio" },
       { src: "img/dormitorio/7whatsapp-image-2026-06-08-at-7-26-30-p.webp", alt: "Dormitorio" },
