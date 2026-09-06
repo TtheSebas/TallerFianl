@@ -44,6 +44,11 @@ export const GALLERIES: Record<string, { title: string; poster?: string; precioD
   dormitorio: {
     title: "Dormitorio",
     images: [
+      { src: "img/dormitorio/cama-nueva-6.jpg", alt: "Cama de madera maciza" },
+      { src: "img/dormitorio/cama-nueva-7.jpg", alt: "Diseño de cama elegante" },
+      { src: "img/dormitorio/cama-nueva-8.jpg", alt: "Estructura de cama y veladores" },
+      { src: "img/dormitorio/cama-nueva-9.jpg", alt: "Cama y mesas de noche de madera" },
+      { src: "img/dormitorio/cama-nueva-10.jpg", alt: "Cama matrimonial diseño clásico" },
       { src: "img/dormitorio/cama-nueva-1.jpg", alt: "Cama a medida Muebles Mesias" },
       { src: "img/dormitorio/cama-nueva-2.jpg", alt: "Dormitorio de lujo Muebles Mesias" },
       { src: "img/dormitorio/cama-nueva-3.jpg", alt: "Cabecero tapizado" },
