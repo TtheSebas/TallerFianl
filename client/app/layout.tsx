@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     locale: 'es_EC',
     siteName: 'Muebles Mesias',
   },
+  other: {
+    'facebook-domain-verification': 'sd1gm65lzkw02kq5mxkhed9w6uf29',
+  },
 };
 
 import WhatsAppFloat from '@/components/WhatsAppFloat';
@@ -54,6 +57,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${playfair.variable} ${inter.variable}`} style={{ scrollBehavior: 'smooth' }}>
       <head>
+        <meta name="facebook-domain-verification" content="sd1gm65lzkw02kq5mxkhed9w6uf29" />
         {/* Google tag (gtag.js) */}
         <Script
           strategy="afterInteractive"
