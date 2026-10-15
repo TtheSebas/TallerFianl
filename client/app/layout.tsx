@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: 'Muebles Mesias',
   },
   other: {
-    'facebook-domain-verification': 'sd1gm65lzkw02kq5mxkhed9w6uf29',
+    'facebook-domain-verification': 'sd1gm65lzkw02kq5rnxkhcd9w6uf79',
   },
 };
 
@@ -57,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${playfair.variable} ${inter.variable}`} style={{ scrollBehavior: 'smooth' }}>
       <head>
-        <meta name="facebook-domain-verification" content="sd1gm65lzkw02kq5mxkhed9w6uf29" />
+        <meta name="facebook-domain-verification" content="sd1gm65lzkw02kq5rnxkhcd9w6uf79" />
         {/* Google tag (gtag.js) */}
         <Script
           strategy="afterInteractive"
